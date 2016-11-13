@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  obfsproxy-server:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+     - PASSWORD=DC62ATNXOSVK7TZSNI43GYIP3O3BFR6T
+     - OBFSPROXY_ROLE=server
+  obfsproxy-client:
+    build: .
+    ports:
+      - "8081:8080"
+    environment:
+     - PASSWORD=DC62ATNXOSVK7TZSNI43GYIP3O3BFR6T
+     - OBFSPROXY_ROLE=client
